@@ -6,14 +6,15 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
             android:title="@string/home"/>
-        <item
-            android:id="@+id/nav_notification"
-            android:icon="@drawable/ic_notification"
-            android:title="@string/notification"/>
+
         <item
             android:id="@+id/nav_session"
             android:icon="@drawable/ic_session"
             android:title="@string/Session"/>
+        <item
+            android:id="@+id/nav_focus_on"
+            android:icon="@drawable/ic_focus_on"
+            android:title="@string/focus_on"/>
 
         <item
             android:id="@+id/nav_collection"
