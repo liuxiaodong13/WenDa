@@ -3,6 +3,7 @@
 
     <group android:checkableBehavior="single">
         <item
+
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
             android:title="@string/home"/>
@@ -12,9 +13,9 @@
             android:icon="@drawable/ic_session"
             android:title="@string/Session"/>
         <item
-            android:id="@+id/nav_focus_on"
+            android:id="@+id/nav_concern"
             android:icon="@drawable/ic_focus_on"
-            android:title="@string/focus_on"/>
+            android:title="@string/concern"/>
 
         <item
             android:id="@+id/nav_collection"
