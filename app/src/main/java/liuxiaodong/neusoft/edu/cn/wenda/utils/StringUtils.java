@@ -16,4 +16,5 @@ public class StringUtils {
         matcher = pattern.matcher(email);
         return matcher.matches();
     }
+
 }

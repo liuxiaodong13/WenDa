@@ -1,6 +1,5 @@
 package liuxiaodong.neusoft.edu.cn.wenda.base;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +11,8 @@ import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 import liuxiaodong.neusoft.edu.cn.wenda.R;
+import liuxiaodong.neusoft.edu.cn.wenda.model.MyUser;
+import liuxiaodong.neusoft.edu.cn.wenda.other.AppSettings;
 
 /**
  * Created by DONG on 2016/10/19.
@@ -20,9 +21,10 @@ import liuxiaodong.neusoft.edu.cn.wenda.R;
 public class BaseFragment extends Fragment {
     private static final String ARGS = "args";
     protected static final String STATE_SAVE_IS_HIDDEN = "STATE_SAVE_IS_HIDDEN";
-    protected Activity mActivity;
+    protected BaseActivity mActivity;
 
     protected View view;
+    protected int listItems = AppSettings.getListItemCounts();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,7 +69,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected View buildRecyclerViewFragment(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
-        view = inflater.inflate(R.layout.fragment_base_recyclerview, container, false);
+        view = inflater.inflate(R.layout.base_recyclerview, container, false);
         ButterKnife.bind(this, view);
         initView();
         initData();
@@ -85,12 +87,16 @@ public class BaseFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mActivity = (Activity) context;
+        this.mActivity = (BaseActivity) context;
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
         mActivity = null;
+    }
+
+    public MyUser getCurrentUser() {
+        return  MyUser.getCurrentUser(MyUser.class);
     }
 }

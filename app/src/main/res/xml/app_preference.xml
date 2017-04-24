@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="edittext_screen"
+        android:summary="主题"
+        android:title="主题">
+        <ListPreference
+            android:defaultValue="@string/default_list_entries_value"
+            android:dialogTitle="选择颜色"
+            android:entries="@array/list_colors"
+            android:entryValues="@array/list_colors_value"
+            android:key="ThemeColor"
+            android:summary="蓝色"
+            android:title="主题颜色"
+            />
+
+    </PreferenceCategory>
+
+
+    <!-- 第一组 -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="edittext_screen"
+        android:title="阅读">
+        <ListPreference
+            android:defaultValue="@string/item_counts_auto"
+            android:dialogTitle="请选择"
+            android:entries="@array/item_counts"
+            android:entryValues="@array/item_counts"
+            android:key="ItemCounts"
+            android:summary="@string/item_counts_auto"
+            android:title="数据加载数量">
+        </ListPreference>
+    </PreferenceCategory>
+
+    <!-- 第二组 -->
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="提醒">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="isNotifyNewAnswer"
+            android:summary="您的提问有新回答将通知提醒"
+            android:title="新回答">
+        </CheckBoxPreference>
+
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="isNotifyNewQuestion"
+            android:summary="有您擅长领域的新提问将通知提醒"
+            android:title="新提问">
+        </CheckBoxPreference>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="isNotifyConcernedQuestionUpdated"
+            android:summary="当您的关注提问有新回答时将通知提醒"
+            android:title="关注更新">
+        </CheckBoxPreference>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="isOnLed"
+            android:summary="LED灯提醒"
+            android:title="LED提醒">
+        </CheckBoxPreference>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="isVibrateSendSuccess"
+            android:summary="内容发送成功后震动反馈"
+            android:title="震动反馈">
+        </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="其他">
+        <Preference
+            android:key="cleanCache"
+            android:summary="0Kb"
+            android:title="清理缓存">
+
+        </Preference>
+
+
+        </PreferenceCategory>
+
+
+
+    <!-- 第三组 -->
+
+</PreferenceScreen>
+

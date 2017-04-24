@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:background="@drawable/button_background"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+        <View
+            android:background="#ccc"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <liuxiaodong.neusoft.edu.cn.wenda.ui.AudioRecorderButton
+            android:id="@+id/btn_record"
+            style="@style/recorder_button"
+            android:text="@string/str_recorder_normal"/>
+
+</FrameLayout>

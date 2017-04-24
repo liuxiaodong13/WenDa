@@ -2,35 +2,88 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="liuxiaodong.neusoft.edu.cn.wenda">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
     <application
-        android:icon="@mipmap/ic_launcher"
+        android:name=".base.APP"
+        android:icon="@mipmap/wenda"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/BaseIndigo">
         <activity
             android:name=".activity.MainActivity"
-            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboard"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme">
-
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+                <action android:name="activity.notification"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="orientation|keyboard"/>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:configChanges="orientation|keyboard"/>
+        <activity
+            android:name=".activity.NewQuestionActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"/>
+   <!--         android:windowSoftInputMode="adjustResize"-->
+        <activity
+            android:name=".activity.PhotoPickerActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.UserInfoActivity"/>
+        <activity android:name=".activity.QuestionInfoActivity">
+            <intent-filter>
+                <action android:name="activity.notification.update"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.NewAnswerActivity">
+            <intent-filter>
+                <action android:name="activity.question.fillByDraft"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.AnswerInfoActivity"/>
+        <activity
+            android:name=".activity.EditUserInfoActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.RelevantListActivity"/>
+        <activity android:name=".activity.AnswerListActivity"/>
+        <activity
+            android:name=".activity.DraftActivity"
+            android:launchMode="singleTask"/>
+
+        <service
+            android:name=".service.WenDaNotificationService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
 
         <activity
-            android:name=".activity.LoginActivity" android:launchMode="singleTask"/>
-        <activity android:name=".activity.RegisterAcitivity" android:launchMode="singleTask"/>
-
+            android:name=".activity.SettingActivity"
+            android:label="@string/title_activity_settings"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".activity.PhotoPreviewActivity"/>
     </application>
 
 </manifest>

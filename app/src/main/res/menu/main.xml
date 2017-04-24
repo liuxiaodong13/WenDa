@@ -2,23 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:title="@string/search"
-        android:id="@+id/action_search"
-        android:icon="@drawable/ic_search_black_24dp"
-        app:showAsAction="always"/>
+
     <item
         android:id="@+id/action_filter"
         android:icon="@drawable/ic_filter_list_black_24dp"
         android:title="@string/filter"
         app:showAsAction="always"
         />
-    <item
-        android:title="@string/notification"
-        android:id="@+id/action_notification"
-        android:icon="@drawable/ic_notification"
-        app:showAsAction="always"
-        />
+
     <item
         android:id="@+id/action_exit"
         android:title="@string/exit"

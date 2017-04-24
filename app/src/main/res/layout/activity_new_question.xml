@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_root"
+              android:orientation="vertical"
+              android:fitsSystemWindows="true"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/appbar"/>
+
+    <EditText
+        android:minLines="6"
+        android:inputType="textMultiLine"
+        android:gravity="left|top"
+        android:lineSpacingExtra="5dp"
+        android:textSize="18sp"
+        android:id="@+id/et_question_content"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/selected_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <liuxiaodong.neusoft.edu.cn.wenda.ui.RecordView2
+            android:visibility="visible"
+            android:id="@+id/rv_Record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </liuxiaodong.neusoft.edu.cn.wenda.ui.RecordView2>
+    </LinearLayout>
+
+
+    <Spinner
+        android:spinnerMode="dialog"
+        android:layout_margin="5sp"
+        android:id="@+id/spinner_category_list"
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"/>
+
+    <include layout="@layout/new_question_bottombar"/>
+
+
+</LinearLayout>

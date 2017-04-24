@@ -6,7 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="liuxiaodong.neusoft.edu.cn.wenda.activity.MainActivity">
+    tools:activity="liuxiaodong.neusoft.edu.cn.wenda.activity.MainActivity">
+
+    <include layout="@layout/appbar"/>
+
+    <include layout="@layout/content_main"/>
 
     <android.support.design.widget.FloatingActionButton
         app:layout_behavior="liuxiaodong.neusoft.edu.cn.wenda.ui.ScrollAwareFABBehavior"
@@ -17,11 +21,6 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
         app:rippleColor="@color/colorPrimaryDark"
-        android:src="@drawable/ic_plus" />
-
-    <include layout="@layout/toolbar"/>
-
-    <include layout="@layout/content_main"/>
-
+        app:srcCompat="@drawable/ic_plus" />
 
 </android.support.design.widget.CoordinatorLayout>

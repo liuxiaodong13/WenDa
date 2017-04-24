@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimary"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    tools:showIn="@layout/activity_new_question">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_pic"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10sp"
+            android:background="@drawable/ic_photo_black_24dp"/>
+
+        <Button
+            android:id="@+id/btn_voice"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10sp"
+            android:background="@drawable/ic_mic_black_24dp"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10sp"
+            android:background="@drawable/ic_send_black_24dp"/>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
